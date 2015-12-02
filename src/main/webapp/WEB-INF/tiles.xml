@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Templates Layout -->
+	<definition name="ooso.site.layout" template="/WEB-INF/layouts/layout.jsp">
+		<put-attribute name="title" value="ooso" />
+		<put-attribute name="pagexStyle" value="" />
+		<put-attribute name="pagevStyle" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/tiles/sidebar.jsp" />
+		<put-attribute name="contents" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+		<put-attribute name="pagecPlugins" value="" />
+		<put-attribute name="pagexPlugins" value="" />
+		<put-attribute name="pagevPlugins" value="" />
+		<put-attribute name="onloadComponent" value="/WEB-INF/tiles/onload.jsp" />
+	</definition>
+	
+	<!-- Templates Classic -->
+	<definition name="ooso.site" template="/WEB-INF/layouts/classic.jsp">
+		<put-attribute name="title" value="ooso" />
+		<put-attribute name="pagexStyle" value="" />
+		<put-attribute name="pagevStyle" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/tiles/sidebar.jsp" />
+		<put-attribute name="content" value="/WEB-INF/tiles/content.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+		<put-attribute name="pagecPlugins" value="" />
+		<put-attribute name="pagexPlugins" value="" />
+		<put-attribute name="pagevPlugins" value="" />
+		<put-attribute name="onloadComponent" value="/WEB-INF/tiles/onload.jsp" />
+	</definition>
+	
+	<!-- Pages -->
+	<definition name="site.content" extends="ooso.site">
+		<put-attribute name="content" value="" />
+	</definition>
+	
+	<definition name="site.welcome" extends="ooso.site.layout">
+		<put-attribute name="contents" value="/WEB-INF/views/welcome.jsp" />
+	</definition>
+	
+	<definition name="site.getree" extends="ooso.site.layout">
+		<put-attribute name="contents" value="/WEB-INF/views/common/tree.jsp" />
+	</definition>
+	
+	<definition name="site.datetimepicker" extends="ooso.site.layout">
+		<put-attribute name="contents" value="/WEB-INF/views/common/datetimepicker.jsp" />
+	</definition>
+	
+	<definition name="site.ooeditor" extends="ooso.site.layout">
+		<put-attribute name="contents" value="/WEB-INF/views/common/ooeditor.jsp" />
+	</definition>
+	
+</tiles-definitions>
